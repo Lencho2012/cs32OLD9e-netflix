@@ -39,7 +39,7 @@ else                                   # UTCS
     PIP      := pip3
     PYLINT   := pylint3
     COVERAGE := coverage-3.5
-    PYDOC    := pydoc3.5
+    PYDOC    := pydoc3
     AUTOPEP8 := autopep8
 endif
 	
