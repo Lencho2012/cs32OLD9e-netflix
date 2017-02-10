@@ -41,9 +41,9 @@ CUSTOMER_AVERAGE_RATING_YEARLY = create_cache(
     "cache-customerAverageRatingByYear.pickle")
 '''
 
-actual_scores_cache ={10040: {2417853: 1, 1207062: 2, 2487973: 3}}
-movie_year_cache = {10040: 1990}
-decade_avg_cache = {1990: 2.4}
+actual_scores_cache ={10040: {2417853: 1, 1207062: 2, 2487973: 3}, 10030: {1234567: 1, 7654321: 1, 1111111: 1},10050: {2417850: 2, 1207060: 2, 2487970: 2}}
+movie_year_cache = {10040: 1990, 10030: 2000, 10050: 2010}
+decade_avg_cache = {1990: 2.4, 2000: 1, 2010: 2}
 
 # ------------
 # netflix_eval
@@ -63,7 +63,7 @@ def netflix_eval(reader, writer) :
             current_movie = line.rstrip(':')
             pred = movie_year_cache[int(current_movie)]
             pred = (pred // 10) *10
-            prediction = decade_avg_cache[pred]
+            prediction = decade_avg_cache[pred]            
             writer.write(line)
             writer.write('\n')
         else:
@@ -75,5 +75,6 @@ def netflix_eval(reader, writer) :
             writer.write('\n')	
     # calculate rmse for predications and actuals
     rmse = sqrt(mean(square(subtract(predictions, actual))))
+    print (sqrt(mean(square(subtract(predictions, actual)))))
     writer.write(str(rmse)[:4] + '\n')
 
