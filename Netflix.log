@@ -1,0 +1,23 @@
+commit f7c84c1983dcf99ea7dea137684bf231440b959a
+Author: Angel Martinez <angelm07@cs.utexas.edu>
+Date:   Fri Feb 10 15:28:45 2017 -0600
+
+    pydoc changes
+
+commit 13c0234d75c30c76c2ad46f26db52c804ff144ac
+Author: Angel Martinez <angelm07@cs.utexas.edu>
+Date:   Fri Feb 10 15:24:24 2017 -0600
+
+    testing RunNetflix
+
+commit 436b4f25413252e3f2b37eb99d6e531f0d601572
+Author: Angel Martinez <angelm07@cs.utexas.edu>
+Date:   Fri Feb 10 15:18:33 2017 -0600
+
+    added travis file
+
+commit 10b7031220bdef69f5175c4ae284a3db0efc7926
+Author: Angel Martinez <angelm07@cs.utexas.edu>
+Date:   Fri Feb 10 15:06:08 2017 -0600
+
+    added public repo files
