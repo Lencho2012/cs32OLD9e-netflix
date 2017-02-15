@@ -1,13 +1,14 @@
-.E
-======================================================================
-ERROR: test_eval_2 (__main__.TestNetflix)
+...
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "TestNetflix.py", line 34, in test_eval_2
-    print (sqrt(mean(square(subtract(predictions, actual)))))
-NameError: name 'predictions' is not defined
+Ran 3 tests in 0.001s
 
-----------------------------------------------------------------------
-Ran 2 tests in 0.001s
-
-FAILED (errors=1)
+OK
+0.909212113132
+0.0
+0.0
+Name             Stmts   Miss Branch BrPart  Cover   Missing
+------------------------------------------------------------
+Netflix.py          43      3      6      1    92%   26-29, 22->26
+TestNetflix.py      23      0      0      0   100%
+------------------------------------------------------------
+TOTAL               66      3      6      1    94%
