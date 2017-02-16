@@ -46,7 +46,7 @@ CUSTOMER_AVERAGE_RATING = create_cache(
 # for key in ACTUAL_CUSTOMER_RATING:
 #     print(key)
 # #     print(ACTUAL_CUSTOMER_RATING[key])
- print(ACTUAL_CUSTOMER_RATING[])
+#print(ACTUAL_CUSTOMER_RATING[])
 
 #print(ACTUAL_CUSTOMER_RATING[1048489])
 # print(ACTUAL_CUSTOMER_RATING[2097068])
@@ -91,7 +91,7 @@ def netflix_eval(reader, writer) :
         if line[-1] == ':':
 		# It's a movie
             current_movie = line.rstrip(':')
-            movie_avg = AVERAGE_MOVIE_RATING[current_movie]
+            movie_avg = AVERAGE_MOVIE_RATING[int(current_movie)]
             # pred = 
             # pred = (pred // 10) *10
             # prediction = decade_avg_cache[pred] #prediction place -> where we code           
@@ -100,10 +100,10 @@ def netflix_eval(reader, writer) :
         else:
 		# It's a customer
             current_customer = line
-            customer_avg.append(CUSTOMER_AVERAGE_RATING[current_customer])
-            prediction = (movie_avg + CUSTOMER_AVERAGE_RATING[current_customer] + AVERAGE_RATING) / 3
+            customer_avg.append(CUSTOMER_AVERAGE_RATING[int(current_customer)])
+            prediction = (movie_avg + CUSTOMER_AVERAGE_RATING[int(current_customer)]) / 2
             predictions.append(prediction)
-            actual.append(actual_scores_cache[int(current_movie)][int(current_customer)])
+            actual.append(ACTUAL_CUSTOMER_RATING[(int(current_customer), int(current_movie))])
             writer.write(str(prediction)) 
             writer.write('\n')	
     # calculate rmse for predications and actuals
