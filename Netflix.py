@@ -56,7 +56,7 @@ CUSTOMER_AVERAGE_RATING = create_cache(
 # for key in AVERAGE_MOVIE_RATING_PER_YEAR:
 #     print(key)
 #     #print(AVERAGE_MOVIE_RATING_PER_YEAR[key])
-    
+
 # for key in AVERAGE_MOVIE_RATING:
 #     print(key)
 #     print(AVERAGE_MOVIE_RATING[key])
@@ -87,14 +87,14 @@ def netflix_eval(reader, writer) :
     for line in reader:
     # need to get rid of the '\n' by the end of the line
         line = line.strip()
-        # check if the line ends with a ":", i.e., it's a movie title 
+        # check if the line ends with a ":", i.e., it's a movie title
         if line[-1] == ':':
 		# It's a movie
             current_movie = line.rstrip(':')
             movie_avg = AVERAGE_MOVIE_RATING[int(current_movie)]
-            # pred = 
+            # pred =
             # pred = (pred // 10) *10
-            # prediction = decade_avg_cache[pred] #prediction place -> where we code           
+            # prediction = decade_avg_cache[pred] #prediction place -> where we code
             writer.write(line)
             writer.write('\n')
         else:
@@ -104,11 +104,12 @@ def netflix_eval(reader, writer) :
             prediction = (movie_avg + CUSTOMER_AVERAGE_RATING[int(current_customer)]) / 2
             predictions.append(prediction)
             actual.append(ACTUAL_CUSTOMER_RATING[(int(current_customer), int(current_movie))])
-            writer.write(str(prediction)) 
-            writer.write('\n')	
+            writer.write(str(prediction))
+            writer.write('\n')
     # calculate rmse for predications and actuals
-    rmse = sqrt(mean(square(subtract(predictions, actual))))
-    print (sqrt(mean(square(subtract(predictions, actual)))))
+    rmse1 = sqrt(mean(square(subtract(predictions, actual))))
+    rmse = ("%.2f" % round(rmse1,2))
+    #print (sqrt(mean(square(subtract(predictions, actual)))))
     writer.write(str(rmse)[:4] + '\n')
 
 #def netflix_pred(, cache): #avgMY
