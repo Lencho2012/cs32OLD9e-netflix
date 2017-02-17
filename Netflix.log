@@ -1,3 +1,45 @@
+commit 0620375d7a4282097483bcf7fd81779dbc5e3b09
+Author: Angel Martinez <angelm07@cs.utexas.edu>
+Date:   Thu Feb 16 19:33:51 2017 -0600
+
+    unit tests updated
+
+commit 553af93f17f06579a2b8af7a28a15d77e193b573
+Author: Angel Martinez <angelm07@cs.utexas.edu>
+Date:   Thu Feb 16 19:02:56 2017 -0600
+
+    netflix evals and rsme
+
+commit c3a4fa8875594f86033b7827702bc812d46430a6
+Author: Angel Martinez <angelm07@cs.utexas.edu>
+Date:   Wed Feb 15 19:07:12 2017 -0600
+
+    rmse currently .98 ish
+
+commit 7359a3ec5533dabe9b6fd92689a2efcb00d0a05e
+Author: Angel Martinez <angelm07@cs.utexas.edu>
+Date:   Tue Feb 14 21:47:32 2017 -0600
+
+    Netflix.py eval func work
+
+commit bb0186e6026567b5d2f37449ddba9cc02ffcd8ac
+Author: Angel Martinez <angelm07@cs.utexas.edu>
+Date:   Tue Feb 14 19:32:55 2017 -0600
+
+    uncommented create cache method to get cache dictionaries
+
+commit fc252892fd3bf5e10945d96bbbce00d1287b3376
+Author: Angel Martinez <angelm07@cs.utexas.edu>
+Date:   Fri Feb 10 16:16:53 2017 -0600
+
+    added test unit tests
+
+commit cc2617805c88b37f0b431f3b94bb216f7556803b
+Author: Angel Martinez <angelm07@cs.utexas.edu>
+Date:   Fri Feb 10 15:32:22 2017 -0600
+
+    added pydoc html file
+
 commit f7c84c1983dcf99ea7dea137684bf231440b959a
 Author: Angel Martinez <angelm07@cs.utexas.edu>
 Date:   Fri Feb 10 15:28:45 2017 -0600
